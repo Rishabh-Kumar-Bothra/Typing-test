@@ -1,3 +1,5 @@
+
+
 window.onload = function () {
     let text = document.getElementById('text1');
     let text2 = document.getElementById('text2');
@@ -14,16 +16,16 @@ window.onload = function () {
     //     alert('time up champ!!');
     // },60000)
 
-    let i = 5;
+    let i = 60;
     let array = [];
-    array = text2.value.split(' ');
+     array = text2.value.split(' ');
 
-    text.onclick = function () {
-        ontimer();
-    }
+        text.onclick = function () {
+            ontimer();
+        }
 
-    let array2 = [];
-    array2 = text.value.split(' ');
+        let array2 = [];
+         array2 = text.value.split(' ');
 
 
 
@@ -47,13 +49,14 @@ window.onload = function () {
     let k=0;
     //setTimeout(check,61000);
     function check() {
-        console.log("here array -> ",array2)
+        console.log("here array ");
+        console.log("this is it",array2)
         console.log(array);
         console.log(count);
         console.log(err);
         for (k=0; k<=array.length;k++) {
             if (array[i] === array2[i]) {
-                count++;
+                count++;g
             }
             else {
                 err++;
@@ -65,3 +68,4 @@ window.onload = function () {
     console.log(array);
 
 }
+
