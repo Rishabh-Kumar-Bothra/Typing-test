@@ -50,7 +50,7 @@ window.onload = function () {
     //setTimeout(check,61000);
     function check() {
         console.log("here array ");
-        console.log("this is it",array2)
+        console.log(array2);
         console.log(array);
         console.log(count);
         console.log(err);
