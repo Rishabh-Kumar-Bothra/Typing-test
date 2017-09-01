@@ -1,10 +1,8 @@
-
-
 window.onload = function () {
-    let text = document.getElementById('text1');
+    let text1 = document.getElementById('text1');  // text typed
     let text2 = document.getElementById('text2');
-    var count = 0;
-    var err = 0;
+    let count = 0;
+    let err = 0;
 
 // setInterval(function() {
 //
@@ -16,56 +14,53 @@ window.onload = function () {
     //     alert('time up champ!!');
     // },60000)
 
-    let i = 60;
-    let array = [];
-     array = text2.value.split(' ');
+    let time = 60;
+    let array2 = [];
+    array2 = text2.value.split(' ');
 
-        text.onclick = function () {
-            ontimer();
-        }
+    text1.onclick = function () {
+        ontimer();
+    }
 
-        let array2 = [];
-         array2 = text.value.split(' ');
+    let array1 = [];
+   
 
 
 
 
     function ontimer() {
-        document.getElementById('time').innerHTML = "time : " + i;
-        i--;
-        if(i<0){
+        document.getElementById('time').innerHTML = "time : " + time;
+        time--;
+        if(time<0){
             alert('time up champ!!');
+            array1 = text1.value.split(' ');
             check();
         }
         else{
             setTimeout(ontimer , 1000)
-            text.onclick = null;
+            text1.onclick = null;
         }
 
     }
     function refresh() {
         location.reload();
     }
-    let k=0;
+    
     //setTimeout(check,61000);
     function check() {
-        console.log("here array ");
-        console.log(array2);
-        console.log(array);
-        console.log(count);
-        console.log(err);
-        for (k=0; k<=array.length;k++) {
-            if (array[i] === array2[i]) {
-                count++;g
+
+        for (let k=0; k<array1.length ; k++) {
+            if (array1[k] === array2[k]) {
+                count++;
             }
             else {
                 err++;
             }
         }
-        console.log("speed : "+ count)
-        console.log("error : "+ err)
+        console.log("speed : "+ count);
+        console.log("error : "+ err);
     }
-    console.log(array);
+    
 
 }
 
