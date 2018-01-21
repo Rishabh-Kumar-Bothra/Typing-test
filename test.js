@@ -1,6 +1,7 @@
 window.onload = function () {
     let text1 = document.getElementById('text1');  // text typed
     let text2 = document.getElementById('text2');
+    let result = document.getElementById('result');
     let count = 0;
     let err = 0;
 
@@ -21,6 +22,7 @@ window.onload = function () {
     text1.onclick = function () {
         ontimer();
     }
+
 
     let array1 = [];
    
@@ -50,6 +52,7 @@ window.onload = function () {
     function check() {
 
         for (let k=0; k<array1.length ; k++) {
+
             if (array1[k] === array2[k]) {
                 count++;
             }
@@ -57,9 +60,21 @@ window.onload = function () {
                 err++;
             }
         }
+
+        result.onclick = function () {
+            let r = document.getElementById('fresult');
+            let r2 = document.getElementById('sresult');
+            r.innerText = ("speed :" + count);
+            r2.innerText = ("error :" + err);
+            console.log("arr1" + array1);
+            console.log("arr2" + array2);
+
+        }
         console.log("speed : "+ count);
         console.log("error : "+ err);
     }
+
+
     
 
 }
